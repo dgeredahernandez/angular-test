@@ -1,0 +1,33 @@
+
+<div class="user-list">
+
+<h2>Lista de Usuarios</h2>
+
+<table class="table is-striped is-fullwidth">
+       <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Rol</th>
+            <th>Edad</th>
+            <th>Acciones</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.role }}</td>
+            <td>{{ user.years }}</td>
+            <td>
+                <button class="button is-small is-success" (click)="actualizar(user.id)">Actualizar</button>
+                &nbsp;
+                <button class="button is-small is-danger" (click)="eliminar(user)">Eliminar</button>
+            </td>
+        </tr>
+       </tbody>
+    </table>
+
+</div>    

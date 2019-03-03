@@ -1,0 +1,78 @@
+<div class="user-form" *ngIf="user">
+
+    <form action="" #f="ngForm" autocomplete="off">
+        <div class="field">
+            <label class="label">
+              Nombre
+            </label>
+            <div class="control">
+                <input 
+                name="name" 
+                class="input" 
+                [(ngModel)]="user.name" 
+                type="text" 
+                placeholder="Nombre"
+                #name = "ngModel"                
+                required
+                />                 
+             </div>   
+        </div>
+        <div class="field">
+                <label class="label">
+                  Email
+                </label>
+                <div class="control">
+                    <input 
+                    name="email" 
+                    class="input" 
+                    [(ngModel)]="user.email" 
+                    type="text" 
+                    placeholder="Correo"
+                    #email = "ngModel"                
+                    required
+                    />                 
+                 </div>   
+        </div>
+        <div class="field">
+            <label class="label">
+              Rol
+            </label>
+            <div class="control">
+                <input 
+                name="role" 
+                class="input" 
+                [(ngModel)]="user.role" 
+                type="text" 
+                placeholder="Rol"
+                #role = "ngModel"                
+                required
+                />                 
+             </div>   
+        </div>
+        <div class="field">
+                <label class="label">
+                 Edad
+                </label>
+                <div class="control">
+                    <input 
+                    name="years" 
+                    class="input" 
+                    type="text" 
+                    [(ngModel)]="user.years" 
+                    placeholder="Edad"
+                    #years = "ngModel"
+                    required
+                    />
+                </div>
+            </div>
+       
+        <div class="field">
+            <div class="control">
+                <button (click)='onSubmit(f)' class="button is-info">Guardar</button>
+            &nbsp;&nbsp;&nbsp;
+                <a routerLink="/usuarios" class="button is-info">Cancelar</a>
+            </div>
+        </div>
+
+    </form>
+</div>

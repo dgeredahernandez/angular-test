@@ -1,0 +1,14 @@
+<h2>Aplicativo de usuarios</h2>
+
+<br/>
+
+<div class="users" style="text-align: center;">
+
+<a routerLink="/nuevo-usuario" class="button is-info">Nuevo Usuario</a>
+
+<app-user-list 
+   [users]="users"
+   (handleDelete)="handleDelete($event)"
+   ></app-user-list>
+
+</div>
